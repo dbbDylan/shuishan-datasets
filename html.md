@@ -1,6 +1,7 @@
 # shuishan-datasets
+[![LICENSE](https://img.shields.io/badge/license-MIT-green)](https://github.com/TommySoya/shuishan-datasets/blob/master/LICENSE)
+
 A repository for sharing datasets from the [Shuishan(Sequoia) eLearning platform](https://www.shuishan.net.cn/)
-[![LICENSE](https://img.shields.io/badge/license-CC%20BY--SA%204.0-green)](https://github.com/TommySoya/shuishan-datasets/blob/master/LICENSE)
 
 
 ## Intro.
