@@ -27,7 +27,7 @@ unzip SHUISHAN-CLAD.zip
 
  - Optional link 1: [Google Drive]()
  - Optional link 2: [Baidu Disk]()
- - Optional link 3: <a href="https://shuishan-dataset.oss-cn-shanghai.aliyuncs.com/demo.json" x-oss-force-download: true>Aliyun OSS</a>
+ - Optional link 3: [Aliyun OSS]()
 
 ## Data Descriptions
 
@@ -130,8 +130,8 @@ The `json` files are in the following format:
 
 The detail statistics in *SHUISHAN-CLAD*.
 
-|      course_id      | teachclass_count | video_records | exam_records | homework_records | student_records | attendance_records |
-|:--------------------|:----------------:|:-------------:|:------------:|:----------------:|:---------------:|:------------------:|
+|      course_id      | teachclass<br>count | video<br>records | exam<br>records | homework<br>records | student<br>records | attendance<br>records |
+|:--------------------|:-------------------:|:----------------:|:---------------:|:-------------------:|:------------------:|:---------------------:|
 | 1568116453675110401 |        14        |       0       |     107      |        0         |       128       |        381         |
 | 1549936199112511489 |        1         |      322      |      0       |        0         |       459       |         0          |
 | 1540163265755529218 |        0         |       0       |      0       |        0         |        0        |         0          |
