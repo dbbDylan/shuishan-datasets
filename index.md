@@ -19,7 +19,7 @@ We provide several options to download our dataset:
 **Option 1.** Download via the “wget” command.
 
 ```shell
-wget https://our_link/SHUISHAN/SHUISHAN-CLAD.zip --no-check-certificate
+wget https://shuishan-dataset.oss-cn-shanghai.aliyuncs.com/SHUISHAN-CLAD --no-check-certificate
 unzip SHUISHAN-CLAD.zip
 ```
 
@@ -27,7 +27,7 @@ unzip SHUISHAN-CLAD.zip
 
  - Optional link 1: [Google Drive]()
  - Optional link 2: [Baidu Disk]()
-
+ - Optional link 3: <a href="https://shuishan-dataset.oss-cn-shanghai.aliyuncs.com/demo.json" x-oss-force-download: true>Aliyun OSS</a>
 
 ## Data Descriptions
 
