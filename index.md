@@ -39,7 +39,7 @@ unzip SHUISHAN-CLAD.zip
 
 ### 1. SHUISHAN-CLAD: Course Learning Action Dataset
 
-This dataset contains 400,000+ records of course learning actions, including student learning activities, such as watching videos, reading articles, and completing exercises. The dataset is collected from 87 courses, and the data is collected from 11560 students.
+This dataset contains 400,000+ records of course learning actions, including student learning activities, such as watching videos, reading articles, and completing exercises. The dataset is collected from 79 courses, and the data is collected from 11566 students.
 
 The `json` files are in the following format:
 
