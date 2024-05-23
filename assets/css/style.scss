@@ -1,0 +1,41 @@
+@import 'jekyll-theme-cayman';
+
+.logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 10px auto;
+
+    @include respond-to(large) {
+        gap: 4rem;
+    }
+
+    @include respond-to(medium) {
+        gap: 3rem;
+    }
+    
+    @include respond-to(small) {
+        gap: 2rem;
+    }
+
+    img {
+        height: 8rem;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+
+        @include respond-to(large) {
+            height: 120px;
+        }
+
+        @include respond-to(medium) {
+            height: 90px;
+        }
+
+        @include respond-to(small) {
+            height: 60px;
+        }
+    }
+}
