@@ -31,11 +31,11 @@
         object-fit: contain;
 
         @include large {
-            height: 80px;
+            height: 70px;
         }
 
         @include medium {
-            height: 50px;
+            height: 45px;
         }
 
         @include small {
