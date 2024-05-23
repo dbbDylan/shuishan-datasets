@@ -13,15 +13,15 @@
     margin-top: 50px;
 
     @include large {
-        gap: 16rem;
+        gap: 6rem;
     }
 
     @include medium {
-        gap: 10rem;
+        gap: 5rem;
     }
     
     @include small {
-        gap: 6rem;
+        gap: 4rem;
     }
 
     img {
