@@ -3,6 +3,7 @@
 
 @import 'jekyll-theme-cayman';
 
+
 .logo-container {
     display: flex;
     flex-wrap: wrap;
@@ -11,15 +12,15 @@
     width: 100%;
     margin: 10px auto;
 
-    @include respond-to(large) {
+    @include large {
         gap: 4rem;
     }
 
-    @include respond-to(medium) {
+    @include medium {
         gap: 3rem;
     }
     
-    @include respond-to(small) {
+    @include small {
         gap: 2rem;
     }
 
@@ -29,15 +30,15 @@
         max-width: 100%;
         object-fit: contain;
 
-        @include respond-to(large) {
+        @include large {
             height: 120px;
         }
 
-        @include respond-to(medium) {
+        @include medium {
             height: 90px;
         }
 
-        @include respond-to(small) {
+        @include small {
             height: 60px;
         }
     }
