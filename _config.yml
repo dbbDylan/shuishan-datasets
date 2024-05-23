@@ -1,6 +1,8 @@
 theme: jekyll-theme-cayman
 title: Shuishan Datasets
 description: "A repository for sharing datasets from the Shuishan(Sequoia) eLearning platform"
+assets: true
+
 defaults:
   - scope:
       path: "assets/images"
