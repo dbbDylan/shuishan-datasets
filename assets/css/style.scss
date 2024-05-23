@@ -7,25 +7,24 @@
 .logo-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     margin-top: 50px;
 
     @include large {
-        gap: 8rem;
+        gap: 16rem;
     }
 
     @include medium {
-        gap: 6rem;
+        gap: 10rem;
     }
     
     @include small {
-        gap: 4rem;
+        gap: 6rem;
     }
 
     img {
-        height: 8rem;
         width: auto;
         max-width: 100%;
         object-fit: contain;
