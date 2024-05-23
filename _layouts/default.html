@@ -30,17 +30,7 @@
     <main id="content" class="main-content" role="main">
       {{ content }}
 
-      <div class="logo-container">
-        <a href="https://www.ecnu.edu.cn/" target="_blank">
-          <img src="./images/ecnu.png" alt="ECNU">
-        </a>
-        <a href="https://dase.ecnu.edu.cn/" target="_blank">
-          <img src="./images/ecnu-dase.png" alt="DaSE">
-        </a>
-        <a href="https://www.shuishan.net.cn/" target="_blank">
-          <img src="./images/shuishan.png" alt="SHUISHAN">
-        </a>
-      </div>
+      {% include acknowledgements.html %}
 
       <footer class="site-footer">
         {% if site.github.is_project_page %}
