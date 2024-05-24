@@ -1,44 +1,44 @@
-name: Sync README to All Branches and Pages
+name: Sync README and Deploy to Pages
 
 on:
   push:
     branches:
-      - '*' # 任意分支触发
+      - master
     paths:
-      - 'README.md' # 当修改了README.md时触发
+      - 'README.md' # 当README.md在master分支上被修改时触发
 
 jobs:
-  build:
+  sync-readme-to-pages:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout source
       uses: actions/checkout@v2
 
-    - name: Sync README.md to all branches
+    - name: Checkout master and pull latest README.md
+      run: |
+        git fetch origin master:master # 确保master分支是最新的
+
+    - name: Checkout pages branch or create if not exists
+      run: |
+        git checkout pages || git checkout --orphan pages # 如果pages分支不存在，则创建新分支
+
+    - name: Initialize README.md on pages branch if not exists
+      run: |
+        # 检查pages分支上是否存在README.md，如果不存在，则从master复制
+        [ ! -f README.md ] && cp master/README.md ./ || echo "README.md already exists on pages branch"
+        # 如果pages分支是新创建的（没有历史记录），则需要初始化提交
+        [ ! "$(git rev-parse --is-empty HEAD)" ] || git add README.md && git commit -m "Initialize README.md on pages branch"
+
+    - name: Copy README.md to index.md on pages branch
+      run: |
+        cp README.md index.md # 复制README.md到index.md
+
+    - name: Commit and push to pages branch
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git fetch --all
-        
-        # 遍历所有分支，排除当前分支和gh-pages（如果用于发布GitHub Pages）
-        branches=$(git branch -r | grep -vE 'HEAD|master|gh-pages|pages')
-        for branch in $branches; do
-          git checkout -b ${branch#origin/} origin/$branch
-          git checkout -- README.md
-          git commit -am "Sync README.md from master" || true
-          git push origin ${branch#origin/} --no-verify
-        done
-
-    - name: Checkout Pages Branch
-      run: |
-        git checkout pages
-
-    - name: Sync README.md to index.md on Pages Branch
-      run: |
-        cp README.md ./index.md
         git add index.md
-        git commit -m "Sync README.md to index.md on pages branch"
+        git commit -m "Sync README.md to index.md" -m "Update index.md from master branch"
         git push origin pages
 
-    # 以下是部署到GitHub Pages的步骤，根据需要进行配置
-    # ...
+    # 如果需要，这里可以添加部署到GitHub Pages的步骤
