@@ -1,11 +1,11 @@
-name: Sync README to Pages
+name: Sync README to All Branches and Pages
 
 on:
   push:
     branches:
-      - master
+      - '*' # 任意分支触发
     paths:
-      - 'README.md'
+      - 'README.md' # 当修改了README.md时触发
 
 jobs:
   build:
@@ -14,19 +14,31 @@ jobs:
     - name: Checkout source
       uses: actions/checkout@v2
 
-    - name: Sync README to Pages
+    - name: Sync README.md to all branches
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git fetch --all
+        
+        # 遍历所有分支，排除当前分支和gh-pages（如果用于发布GitHub Pages）
+        branches=$(git branch -r | grep -vE 'HEAD|master|gh-pages|pages')
+        for branch in $branches; do
+          git checkout -b ${branch#origin/} origin/$branch
+          git checkout -- README.md
+          git commit -am "Sync README.md from master" || true
+          git push origin ${branch#origin/} --no-verify
+        done
+
+    - name: Checkout Pages Branch
+      run: |
         git checkout pages
-        cp README.md index.md
+
+    - name: Sync README.md to index.md on Pages Branch
+      run: |
+        cp README.md ./index.md
         git add index.md
         git commit -m "Sync README.md to index.md on pages branch"
         git push origin pages
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./
+    # 以下是部署到GitHub Pages的步骤，根据需要进行配置
+    # ...
