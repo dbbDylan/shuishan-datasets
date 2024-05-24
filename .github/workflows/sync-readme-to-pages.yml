@@ -8,9 +8,6 @@ on:
     #   - 'README.md' 
 
 jobs:
-  permissions:
-    issues: write
-    pull-requests: write
   update-readme-on-pages:
     runs-on: ubuntu-latest
     steps:
