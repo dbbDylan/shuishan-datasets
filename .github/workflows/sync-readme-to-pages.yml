@@ -17,6 +17,7 @@ jobs:
     - name: Checkout pages branch or create if not exists
       run: |
         git checkout pages || git checkout --orphan pages # 如果pages分支不存在，则创建新分支
+        git pull origin pages
 
     - name: Sync README.md to pages branch
       run: |
