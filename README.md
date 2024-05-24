@@ -12,7 +12,7 @@ This repo. is aimed to publicise our datasets collected from the Shuishan(Sequoi
 
 ## Dataests
 Here is a list of datasets we have collected. (But there is only one dataset now~)
-以下是我们目前公开的数据集们（暂时只有SHUISHAN-CLAD~）
+以下是我们目前公开的数据集（暂时只有SHUISHAN-CLAD~）
 
  - [SHUISHAN-CLAD: Course Learning Action Dataset](#1.SHUISHAN-CLAD:CourseLearningActionDataset)
  - ...
