@@ -8,7 +8,7 @@ Open-sourced Dataset(s) from the [Shuishan(Sequoia) eLearning platform](https://
 ## Intro.
 This repo. is aimed to publicise our datasets collected from the Shuishan(Sequoia) eLearning platform, you can download and use it for your study. All of them are desensitized and easily used, which covers course resources, student behaviour and other data.
 
-这个仓库用于公开我们从水杉在线学习平台收集的数据集，您可以下载并使用它们进行您的研究。所有数据集均对特殊字段进行了脱敏（所以如果您想进行特定人群的研究，这份数据集可能并不适合您），涵盖课程资源、学生行为和其他数据。
+这个仓库用于公开我们从水杉在线学习平台收集的数据集，您可以下载并使用它们进行您的研究。所有数据集均对特殊字段进行了脱敏（所以如果您想进行特定人群的研究，这份数据集可能并不适合您），涵盖课程资源、学生行为以及其它数据。
 
 ## Dataests
 Here is a list of datasets we have collected. (But there is only one dataset now~)
