@@ -8,19 +8,28 @@ on:
       - 'README.md' # 当README.md在master分支上被修改时触发
 
 jobs:
-  sync-readme-to-pages:
+  update-readme-on-pages:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout source
       uses: actions/checkout@v2
 
-    - name: Checkout pages
+    - name: Checkout master and pull latest README.md
       run: |
-        git checkout pages
-        git checkout master -- README.md
-        cp README.md index.md
+        git fetch origin master:master # 确保master分支是最新的
+
+    - name: Checkout pages branch or create if not exists
+      run: |
+        git checkout pages || git checkout --orphan pages # 如果pages分支不存在，则创建新分支
+
+    - name: Sync README.md to pages branch
+      run: |
+        cp README.md index.md # 复制README.md到index.md
+
+    - name: Add, commit, and push to pages branch
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
         git add README.md index.md
-        git commit -m "Sync README and Deploy to Pages" --no-verify
-        git add index.md
-        git commit -m "Update index.md on pages branch" --no-verify
+        git commit -m "Sync README.md and update index.md on pages branch" --no-verify
         git push origin pages --no-verify
