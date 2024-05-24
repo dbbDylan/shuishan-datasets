@@ -1,0 +1,32 @@
+name: Sync README to Pages
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'README.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout source
+      uses: actions/checkout@v2
+
+    - name: Sync README to Pages
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git fetch --all
+        git checkout pages
+        cp README.md index.md
+        git add index.md
+        git commit -m "Sync README.md to index.md on pages branch"
+        git push origin pages
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
