@@ -1,7 +1,16 @@
 theme: jekyll-theme-cayman
-title: Shuishan Datasets
 description: "A repository for sharing datasets from the Shuishan(Sequoia) eLearning platform"
+google_analytics: G-E6L182MBVJ
 assets: true
+
+github:
+  # Edit the following lines to customize the repository
+  is_project_page: true
+  repository_url: https://github.com/dbbDylan/shuishan-datasets
+  repository_name: SHUISHAN-DATASETS
+  owner_name: dbbDylan
+  owner_url: https://github.com/dbbDylan
+
 
 defaults:
   - scope:
