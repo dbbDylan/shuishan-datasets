@@ -1,6 +1,7 @@
 theme: jekyll-theme-cayman
 description: "A repository for sharing datasets from the Shuishan(Sequoia) eLearning platform"
-google_analytics: G-E6L182MBVJ
+#google_analytics: G-E6L182MBVJ
+use_umami: true
 assets: true
 
 github:
