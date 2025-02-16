@@ -1,0 +1,37 @@
+<h2 id="data-descriptions">数据描述</h2>
+
+<h3 id="1-shuishan-clad-course-learning-action-dataset">1. SHUISHAN-CLAD: {% t global.shuishan-clad %}</h3>
+
+{% assign clad = site.data.stats["clad"] %}
+<p>这个数据集包含了 {{ clad.records }}+ 条课程学习行为记录，包括学生学习活动，例如观看视频、阅读文章和完成练习。数据集是从 {{ clad.courses }} 余门课程中收集，涵盖 {{ clad.students }} 余名不同学生的行为数据。</p>
+
+<p>我们的数据以<code class="language-plaintext highlighter-rouge">json</code>格式存储，具体字段及含义见下文：</p>
+
+<pre><code id="json-content" class="language-json" data-path="/assets/data/shuishan-clad.json"></code></pre>
+
+<p>SHUISHAN-CLAD 数据集的详细统计信息：</p>
+
+<table>
+  <thead>
+    <tr>
+      <!-- 表头（标题行） -->
+      {% for header in site.data.clad-stats[0] %}
+        <th>{{ header[0] }}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 遍历每一行数据 -->
+    {% for item in site.data.clad-stats %}
+      <tr>
+        {% for value in item %}
+          <!-- 遍历每一列并输出 -->
+          <td>{{ value[1] }}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+<script src="/assets/js/json-format.js"></script>

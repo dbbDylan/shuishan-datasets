@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en-US' }}">
+<html lang="{{ site.lang | default: 'en' }}">
   <head>
     <meta charset="UTF-8">
 
@@ -10,6 +10,7 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="/assets/css/json-format.css">
     {% include head-custom.html %}
   </head>
   <body>
@@ -28,9 +29,32 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-      {{ content }}
 
-      {% include acknowledgements.html %}
+      {% if site.lang == "cn" %}
+        {% capture en-link %}{{ site.baseurl_root }}{{ page.url }}{% endcapture %}
+        <a href="{{ en-link }}" >{% t global.english %}</a>
+
+        <!-- content (cn) -->
+        {% include cn/introduction.html %}
+        {% include cn/datasets.html %}
+        {% include cn/download.html %}
+        {% include cn/contact.html %}
+        {% include cn/description.html %}
+        {% include cn/acknowledgements.html %}
+
+      {% elsif site.lang == "en" %}
+        {% capture cn-link %}{{ site.baseurl_root }}/cn{{ page.url  }}{% endcapture %}
+        <a href="{{ cn-link }}" >{% t global.chinese %}</a>
+
+        <!-- content (en) -->
+        {% include en/introduction.html %}
+        {% include en/datasets.html %}
+        {% include en/download.html %}
+        {% include en/contact.html %}
+        {% include en/description.html %}
+        {% include en/acknowledgements.html %}
+
+      {% endif %}
 
       <footer class="site-footer">
         {% if site.github.is_project_page %}

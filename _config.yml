@@ -4,6 +4,10 @@ description: "A repository for sharing datasets from the Shuishan(Sequoia) eLear
 use_umami: true
 assets: true
 
+languages:
+  - en
+  - cn
+
 github:
   # Edit the following lines to customize the repository
   is_project_page: true
@@ -12,9 +16,11 @@ github:
   owner_name: dbbDylan
   owner_url: https://github.com/dbbDylan
 
-
 defaults:
   - scope:
       path: "assets/images"
     values:
       image: true
+
+plugins:
+  - jekyll-multiple-languages-plugin
