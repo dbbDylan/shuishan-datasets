@@ -1,4 +1,3 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll with GitHub Pages
 
 on:
@@ -29,20 +28,34 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 'latest'  # Set Ruby to the latest version
+          ruby-version: '3.1'  # Specify Ruby version (change to your preferred version)
+
+      # Cache Ruby gems to speed up future builds
+      - name: Cache Ruby gems
+        uses: actions/cache@v3
+        with:
+          path: vendor/bundle  # Cache gem dependencies in the vendor directory
+          key: ${{ runner.os }}-ruby-${{ hashFiles('**/Gemfile.lock') }}  # Cache based on Gemfile.lock changes
+          restore-keys: |
+            ${{ runner.os }}-ruby-
+
       - name: Install dependencies
         run: |
-          bundle install
+          bundle install --path vendor/bundle  # Install gems into the cached directory
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
