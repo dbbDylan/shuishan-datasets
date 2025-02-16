@@ -1,34 +1,40 @@
 name: Sync README and Deploy to Pages
 
 on:
+  # Only trigger on changes to the README.md file in the master branch
   push:
     branches:
       - master
-    # paths:
-    #   - 'README.md' 
+    paths:
+      - 'README.md'  # Only trigger if README.md is changed
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   update-readme-on-pages:
     runs-on: ubuntu-latest
+    env:
+      SYNC_BRANCH: 'gh-pages'
     steps:
     - name: Checkout source
       uses: actions/checkout@v2
 
-    - name: Checkout pages branch or create if not exists
+    - name: Checkout deploy branch or create if not exists
       run: |
-        git checkout pages || git checkout --orphan pages # 如果pages分支不存在，则创建新分支
-        git pull origin pages
+        git checkout $SYNC_BRANCH || git checkout --orphan $SYNC_BRANCH # If the branch doesn't exist, create it
+        git pull origin $SYNC_BRANCH
 
-    - name: Sync README.md to pages branch
+    - name: Sync README.md to deploy branch
       run: |
         git checkout master -- README.md
-        cp README.md index.md # 复制README.md到index.md
+        cp README.md index.md # Copy README.md to index.md
         ls -l
 
-    - name: Add, commit, and push to pages branch
+    - name: Add, commit, and push to deploy branch
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add README.md index.md
-        git commit -m "Sync README.md and update index.md on pages branch" --no-verify
-        git push origin pages --no-verify
+        git commit -m "Sync README.md and update index.md on $SYNC_BRANCH branch" --no-verify
+        git push origin $SYNC_BRANCH --no-verify

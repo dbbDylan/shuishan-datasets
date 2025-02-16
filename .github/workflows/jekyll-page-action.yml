@@ -1,10 +1,12 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Deploy Jekyll with GitHub Pages
 
 on:
-  # Runs on pushes targeting the gh-page branch
+  # Runs on pushes and pull requests targeting the gh-pages branch
   push:
-    branches: ["gh-page"]
+    branches: ["gh-pages"]
+  pull_request:
+    branches: ["gh-pages"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -12,7 +14,7 @@ on:
       deploy-branch:
         description: 'Branch to deploy'
         required: true
-        default: 'gh-page'
+        default: 'gh-pages'
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -36,7 +38,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.7' # or the version of Ruby your project uses
+          ruby-version: 'latest'  # Set Ruby to the latest version
       - name: Install dependencies
         run: |
           bundle install
