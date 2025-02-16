@@ -10,20 +10,23 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      deploy-branch:
+        description: 'Branch to deploy to'
+        required: true
+        default: 'gh-pages'  # Default target branch (can be changed during manual trigger)
 
 jobs:
   update-readme-on-pages:
     runs-on: ubuntu-latest
-    env:
-      SYNC_BRANCH: 'gh-pages'
     steps:
     - name: Checkout source
       uses: actions/checkout@v2
 
     - name: Checkout deploy branch or create if not exists
       run: |
-        git checkout $SYNC_BRANCH || git checkout --orphan $SYNC_BRANCH # If the branch doesn't exist, create it
-        git pull origin $SYNC_BRANCH
+        git checkout ${{ github.event.inputs.deploy-branch }} || git checkout --orphan ${{ github.event.inputs.deploy-branch }} # If the branch doesn't exist, create it
+        git pull origin ${{ github.event.inputs.deploy-branch }}
 
     - name: Sync README.md to deploy branch
       run: |
@@ -36,5 +39,5 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add README.md index.md
-        git commit -m "Sync README.md and update index.md on $SYNC_BRANCH branch" --no-verify
-        git push origin $SYNC_BRANCH --no-verify
+        git commit -m "Sync README.md and update index.md on ${{ github.event.inputs.deploy-branch }} branch" --no-verify
+        git push origin ${{ github.event.inputs.deploy-branch }} --no-verify
