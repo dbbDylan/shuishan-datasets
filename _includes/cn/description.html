@@ -7,7 +7,7 @@
 
 <p>我们的数据以<code class="language-plaintext highlighter-rouge">json</code>格式存储，具体字段及含义见下文：</p>
 
-<pre><code id="json-content" class="language-json" data-path="/assets/data/shuishan-clad.json"></code></pre>
+<pre><code id="json-content" class="language-json" data-path="{{ '/assets/data/shuishan-clad.json?v=' | append: site.github.build_revision | relative_url }}"></code></pre>
 
 <p>SHUISHAN-CLAD 数据集的详细统计信息：</p>
 
@@ -34,4 +34,4 @@
 </table>
 
 
-<script src="/assets/js/json-format.js"></script>
+<script src="{{ '/assets/js/json-format.js?v=' | append: site.github.build_revision | relative_url }}"></script>
