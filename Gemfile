@@ -1,10 +1,10 @@
 source "https://rubygems.org"
 
 # Uncomment the next line to use GitHub Pages (recommended for GitHub Pages)
-gem "github-pages", group: :jekyll_plugins
+# gem "github-pages", group: :jekyll_plugins
 
 # If you need a specific version of Jekyll, you can specify it here, but generally, it’s best to use the version provided by GitHub Pages.
-# gem "jekyll", "~> 4.4.1"   # Uncomment if you do not want to use the GitHub Pages version
+gem "jekyll", "~> 4.4.1"   # Uncomment if you do not want to use the GitHub Pages version
 
 # Default theme for new Jekyll sites
 gem "minima", "~> 2.5"
