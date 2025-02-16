@@ -1,0 +1,190 @@
+{
+  "course_id": {
+    "value": "10000001",
+    "description": "Unique identifier for the course."
+  },
+  "course_type": {
+    "value": 1,
+    "description": "Nature of the course, 1: Compulsory professional course / 2: Compulsory public course"
+  },
+  "creator_id": {
+    "value": "13720181912",
+    "description": "ID of the course creator (e.g., instructor or admin)."
+  },
+  "creator_name": {
+    "value": "张三",
+    "description": "Name of the course creator."
+  },
+  "authority": {
+    "value": 1,
+    "description": "Access rights, 1: Public / 2: Classes Students / 3: Fees"
+  },
+  "liked": {
+    "value": 20,
+    "description": "Number of likes the course has received."
+  },
+  "viewed": {
+    "value": 4000,
+    "description": "Number of times the course has been viewed."
+  },
+  "create_time": {
+    "value": "2020/03/23 13:23:51",
+    "description": "The time when the course was created."
+  },
+  "update_time": {
+    "value": "2023/03/23 12:45:12",
+    "description": "The time when the course was last updated."
+  },
+  "resources": [
+    {
+      "resource_id": {
+        "value": "1367457685162717186",
+        "description": "Unique identifier for the resource."
+      },
+      "resource_type": {
+        "value": "作业",
+        "description": "Type of resource, such as 作业 (homework), 视频 (video), 课件 (slides), 实训 (practical), 测验 (quiz), etc."
+      },
+      "teaching_week": {
+        "value": 1,
+        "description": "The teaching week number when the resource is assigned."
+      },
+      "period": {
+        "value": 0,
+        "description": "The period number in which the resource is available."
+      },
+      "owner_id": {
+        "value": "1297355160548302850",
+        "description": "ID of the resource owner."
+      },
+      "download_times": {
+        "value": 0,
+        "description": "Number of times the resource has been downloaded."
+      },
+      "view_times": {
+        "value": 0,
+        "description": "Number of times the resource has been viewed."
+      },
+      "create_time": {
+        "value": "2021-03-04T20:51:32",
+        "description": "The time when the resource was created."
+      },
+      "update_time": {
+        "value": "2021-09-22T22:22:47",
+        "description": "The time when the resource was last updated."
+      }
+    }
+  ],
+  "teachclasses": [
+    {
+      "teachclass_id": {
+        "value": "10000001",
+        "description": "Unique identifier for the teaching class."
+      },
+      "teacher_name": {
+        "value": "李四",
+        "description": "Name of the teacher who teaches the class."
+      },
+      "term": {
+        "value": "2022-20231",
+        "description": "The term during which the class is taught."
+      },
+      "start_date": {
+        "value": "2020/02/24 00:00:00",
+        "description": "The start date of the term."
+      },
+      "finish_date": {
+        "value": "2020/06/30 00:00:00",
+        "description": "The finish date of the term."
+      },
+      "teacher_id": {
+        "value": "13720181912",
+        "description": "ID of the teacher."
+      },
+      "assistant_id": {
+        "value": "1569260691612483585,1372731764832759810,1303989005536223234,1597863528202371073,1367464835498930178",
+        "description": "List of assistant IDs for the class."
+      },
+      "students": [
+        {
+          "student_id": {
+            "value": "21723851905",
+            "description": "Unique identifier for the student."
+          },
+          "student_username": {
+            "value": "512629102759",
+            "description": "Username of the student."
+          },
+          "student_truename": {
+            "value": "王五",
+            "description": "Real name of the student."
+          },
+          "gender": {
+            "value": "0",
+            "description": "Gender of the student, 1: male, 2: female."
+          },
+          "phone": {
+            "value": "13312345678",
+            "description": "Phone number of the student."
+          },
+          "mail": {
+            "value": "101@stu.ecnu.edu.cn",
+            "description": "Email address of the student."
+          },
+          "major": {
+            "value": "23级英语",
+            "description": "Major of the student."
+          },
+          "company_id": {
+            "value": "000000",
+            "description": "Company ID (if applicable)."
+          },
+          "course_final_score": {
+            "value": 100,
+            "description": "The final score of the student in the course."
+          },
+          "first_class_score": {
+            "value": 100,
+            "description": "Score for the first class."
+          },
+          "login_times": {
+            "value": 33,
+            "description": "Number of times the student has logged in."
+          },
+          "last_login_time": {
+            "value": "2022-03-16 09:42:30",
+            "description": "The last login time of the student."
+          },
+          "video_records": [
+            {
+              "id": {
+                "value": "10000001",
+                "description": "Unique identifier for the video record."
+              },
+              "resource_id": {
+                "value": "10000001",
+                "description": "Resource ID related to the video."
+              },
+              "start_time": {
+                "value": "2021-07-27 08:20:38",
+                "description": "Start time of watching the video."
+              },
+              "end_time": {
+                "value": "2021-07-27 09:20:40",
+                "description": "End time of watching the video."
+              },
+              "view_time": {
+                "value": "3602",
+                "description": "Total viewing time in seconds."
+              },
+              "play_speed": {
+                "value": "1.0",
+                "description": "The playback speed during video viewing."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
