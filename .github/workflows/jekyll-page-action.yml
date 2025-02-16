@@ -4,17 +4,11 @@ name: Deploy Jekyll with GitHub Pages
 on:
   # Runs on pushes and pull requests targeting the gh-pages branch
   push:
-    branches: ["gh-pages"]
-  pull_request:
-    branches: ["gh-pages"]
+    branches:
+      - 'gh-pages'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-    inputs:
-      deploy-branch:
-        description: 'Branch to deploy'
-        required: true
-        default: 'gh-pages'
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -25,7 +19,7 @@ permissions:
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
+  group: 'github-pages'
   cancel-in-progress: false
 
 jobs:

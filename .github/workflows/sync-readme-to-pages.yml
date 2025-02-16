@@ -4,7 +4,7 @@ on:
   # Only trigger on changes to the README.md file in the master branch
   push:
     branches:
-      - master
+      - 'master'
     paths:
       - 'README.md'  # Only trigger if README.md is changed
 
