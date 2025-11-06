@@ -11,24 +11,24 @@ gem "jekyll", "~> 4.4.1"   # Uncomment if you do not want to use the GitHub Page
 
 # Plugins
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-feed"
   gem "jekyll-multiple-languages-plugin" # Add your other plugins here
 end
 
 # Windows and JRuby specific dependencies for time zone data
 platforms :mingw, :x64_mingw, :mswin, :jruby do
-  gem "tzinfo", ">= 1", "< 3"
+  gem "tzinfo"
   gem "tzinfo-data"
 end
 
 # Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
+gem "wdm", :platforms => [:mingw, :x64_mingw, :mswin]
 
 # Lock `http_parser.rb` gem to `v0.6.x` for JRuby builds
-gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
+gem "http_parser.rb", :platforms => [:jruby]
 
 # Webrick for serving the site locally
-gem "webrick", "~> 1.9"
+gem "webrick"
 
 # Optional theme
 gem "jekyll-theme-cayman" # You can change this to another theme of your choice
