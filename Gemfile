@@ -7,7 +7,7 @@ source "https://rubygems.org"
 gem "jekyll", "~> 4.4.1"   # Uncomment if you do not want to use the GitHub Pages version
 
 # Default theme for new Jekyll sites
-gem "minima", "~> 2.5"
+# gem "minima", "~> 2.5"
 
 # Plugins
 group :jekyll_plugins do
