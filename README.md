@@ -1,24 +1,27 @@
 # SHUISHAN DATASETS
-[![LICENSE](https://img.shields.io/badge/license-MIT-green)](https://github.com/TommySoya/shuishan-datasets/blob/master/LICENSE)
 
-Open-sourced Dataset(s) from the [Shuishan(Sequoia) eLearning platform](https://www.shuishan.net.cn/)
+[![LICENSE](https://img.shields.io/badge/license-MIT-green)](https://github.com/ecnu-shuishan/shuishan-datasets/blob/ac42dd3bfd4f245f3869a2a358cbb0a25fa23267/LICENSE)
 
-一个基于[水杉在线学习平台](https://www.shuishan.net.cn/)的开源数据集库
+Open-source datasets from the [Shuishan (Sequoia) e-Learning Platform](https://www.shuishan.net.cn/home).
 
-## Intro.
-This repo. is aimed to publicise our datasets collected from the Shuishan(Sequoia) eLearning platform, you can download and use it for your study. All of them are desensitized and easily used, which covers course resources, student behaviour and other data.
+基于[水杉在线学习平台](https://www.shuishan.net.cn/home)整理与发布的开源数据集项目。
 
-这个仓库用于公开我们从水杉在线学习平台收集的数据集，您可以下载并使用它们进行您的研究。所有数据集均对特殊字段进行了脱敏（所以如果您想进行特定人群的研究，这份数据集可能并不适合您），涵盖课程资源、学生行为以及其它数据。
+## Introduction
 
-## [For more information]((https://dbbdylan.github.io/shuishan-datasets/))
+This repository provides open-source datasets collected from the Shuishan (Sequoia) e-Learning Platform for study and research purposes. All released datasets have been desensitized to protect privacy and are ready for direct use. The current collection covers course resources, student behavioral data, and other related information.
 
-[https://dbbdylan.github.io/shuishan-datasets/](https://dbbdylan.github.io/shuishan-datasets/)
+本仓库用于发布从水杉在线学习平台采集并整理的数据集，供学习与研究使用。所有公开数据均已完成脱敏处理，以保护相关隐私，因此可能不适用于依赖特定个体身份信息的研究。当前数据内容涵盖课程资源、学生行为数据及其他相关信息。
+
+## [For More Information](https://ecnu-shuishan.github.io/shuishan-datasets)
+
+[https://ecnu-shuishan.github.io/shuishan-datasets](https://ecnu-shuishan.github.io/shuishan-datasets)
 
 ## Contact Us
-If you are interested in using our dataset, please [contact us via email(51265903105@stu.ecnu.edu.cn)](mailto:51265903105@stu.ecnu.edu.cn) to obtain the necessary authorization. Additionally, we would appreciate it if you could acknowledge the contribution of this dataset in the acknowledgment section of your paper.
 
-如果您需要使用我们的数据集进行研究，请通过电子邮件（51265903105@stu.ecnu.edu.cn）联系我们以获取必要的授权。此外，如果您在论文的致谢部分提到我们的贡献，我们将不胜感激。
+If you would like to use this dataset in your research, please contact us via email at [dbb_dingyongliang@163.com](mailto:dbb_dingyongliang@163.com) to obtain the necessary authorization. If this dataset contributes to your work, we would appreciate an acknowledgment in your paper.
 
-If you have any questions or suggestions, please also contact us via email or GitHub issue.
+如果您希望在研究中使用本数据集，请通过电子邮件 [dbb_dingyongliang@163.com](mailto:dbb_dingyongliang@163.com) 联系我们，以获取必要授权。如本数据集对您的工作有所帮助，欢迎在论文致谢部分注明我们的贡献。
 
-如果您有任何疑问或建议，也请通过邮件或者GitHub issue的方式联系我们。
+If you have any questions or suggestions, please feel free to contact us by email or open a GitHub issue.
+
+如果您有任何问题或建议，也欢迎通过电子邮件或 GitHub Issue 与我们联系。
